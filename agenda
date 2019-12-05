@@ -29,3 +29,21 @@ int main(){
 		printf("\nArchivo creado");
 		printf("\nReinicie el programa para comenzar");
 	}
+	else{
+		fclose(ptrF);
+		printf("El Archivo agenda.txt existe.");
+		menu();		
+	}
+	
+}
+int menu(){
+	int opc;
+	system("cls");
+	printf("\nSeleccione una de las siguientes opciones, tecleando el numero de la opcion que desee elegir");
+	printf("\n1] Dar de alta nuevo contacto");
+	printf("\n2] Mostrar todos los contactos");
+	printf("\n3] Borrar Agenda");
+	printf("\n4] Salir del programa\n");
+	scanf("%d", &opc);
+	if(opc<5 && opc>0){
+		switch(opc){
