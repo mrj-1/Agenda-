@@ -8,13 +8,6 @@ struct persona {
   char nombre[40];
   unsigned long telf;
 struct persona*sig;
-
-struct persona Nodo;
-Nodo*final;
-Nodo*inicio;
-struct Persona*iniciar(struct Persona*lista){
-lista=(struct -persona*)malloc(sizeof(struct Persona));
-}
 };
  
 struct persona leer_persona();
