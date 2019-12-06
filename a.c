@@ -56,6 +56,22 @@ void mostrarContactos (struct persona *l1){
 
 int menu()
 {
+  
+int buscar*persona(struct persona agenda[], int tam, char *nombre, struct persona &p)
+{
+  int i=0,encontrado=-1;
+  while(i<tam && encontrado==-1)
+   {
+    if(strcmp(agenda[i]->nombre,nombre)==0)
+     {
+       encontrado=i;
+       p=agenda[i];
+     }
+    else 
+       i++;
+   }    
+  return encontrado;
+}
   int opcion;
   printf("\nn1. Insertar contacto");
   printf("\nn2. Buscar Contacto");
@@ -66,5 +82,16 @@ int menu()
   scanf("%d",&opcion);
   return opcion;
 }
- 
+ int borrar*persona(struct persona agenda[], int tam, char *nombre)
+{
+  int exito=0,posicion;
+  struct persona p;
+  posicion=buscar_persona(agenda,tam,nombre,p);
+  if(posicion!=-1)
+   {
+     exito=1;
+     agenda[posicion]->nombre[0]='?';
+   } 
+  return exito;
+}
 
