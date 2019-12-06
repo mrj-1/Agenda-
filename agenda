@@ -38,7 +38,7 @@ int main(){
 }
 int menu(){
 	int opc;
-	system("cls");
+	system("cls");z
 	printf("\nSeleccione una de las siguientes opciones, tecleando el numero de la opcion que desee elegir");
 	printf("\n1] Dar de alta nuevo contacto");
 	printf("\n2] Mostrar todos los contactos");
@@ -47,3 +47,24 @@ int menu(){
 	scanf("%d", &opc);
 	if(opc<5 && opc>0){
 		switch(opc){
+case 1:
+				alta();
+				break;
+			case 2:
+				mostrar();
+				break;
+			case 3:
+				borrar();
+				break;
+			case 4:
+				printf("\nHasta luego");
+				exit(1);
+				break;
+		}
+	}
+	else{
+		printf("\nOpcion no valida, intente de nuevo");
+		menu();
+	}
+return 0;
+}
