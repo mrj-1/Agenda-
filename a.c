@@ -138,4 +138,24 @@ int menu()
   scanf("%d",&opcion);
   return opcion;
 }
+ void inicializar_agenda(struct persona agenda[], int tam)
+{
+  int i;
+  for(i=0; i<tam; i++)
+    agenda[i].nombre[0]='?';
+//    strcmp(agenda[i].nombre,"");
+}
  
+int borrar_persona(struct persona agenda[], int tam, char *nombre)
+{
+  int exito=0,posicion;
+  struct persona p;
+  posicion=buscar_persona(agenda,tam,nombre,p);
+  if(posicion!=-1)
+   {
+     exito=1;
+     agenda[posicion].nombre[0]='?';
+   } 
+  return exito;
+}
+
